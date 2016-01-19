@@ -7,15 +7,18 @@ $(document).ready(function() {
     var year = parseInt($("input#year").val());
     var result = leapYear(year);
     $(".year").text(year);
-
-    if (year === "NaN") {
+    $("#result").hide();
+debugger
+    if (isNaN(year)) {
       $("#NaN").show();
     } else if (!result) {                 // same as writing if (result === false)
         $(".not").text("not");
+          $("#result").show();
       } else {
         $(".not").text("");
-      }
-      $("#result").show();
-      event.preventDefault();
+          $("#result").show();
+        }
+
+        event.preventDefault();
   });
 });
