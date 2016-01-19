@@ -8,7 +8,7 @@ $(document).ready(function() {
     var result = leapYear(year);
     $(".year").text(year);
     $("#result").hide();
-debugger
+
     if (isNaN(year)) {
       $("#NaN").show();
     } else if (!result) {                 // same as writing if (result === false)
