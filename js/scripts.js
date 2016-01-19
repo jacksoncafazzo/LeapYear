@@ -11,13 +11,17 @@ $(document).ready(function() {
 
     if (isNaN(year)) {
       $("#NaN").show();
-    } else if (!result) {                 // same as writing if (result === false)
-        $(".not").text("not");
-          $("#result").show();
-      } else {
-        $(".not").text("");
-          $("#result").show();
-        }
+    }
+    else if (!result) {                 // same as writing if (result === false)
+      $(".not").text("not");
+      $("#NaN").hide();
+      $("#result").show();
+    }
+    else {
+      $(".not").text("");
+      $("#NaN").hide();
+      $("#result").show();
+    }
 
         event.preventDefault();
   });
